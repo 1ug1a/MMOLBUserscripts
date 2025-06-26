@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MMOLB Player Links
 // @namespace    https://github.com/1ug1a
-// @version      0.1.0
+// @version      0.1.1
 // @description  Provides direct links to individual player pages on the game watch page
 // @author       1ug1a
 // @match        *://mmolb.com/*
@@ -78,7 +78,8 @@
 
       // pitching/batting/on deck
       $("div.text-xs.font-semibold.uppercase.tracking-wide.opacity-70").next().html(function(index, oldHtml) {
-        return oldHtml !== link ? oldHtml.replace(playerName.slice(3), link) : oldHtml
+        // console.log(playerName.split(' ').slice(1).join(' '))
+        return oldHtml !== link ? oldHtml.replace(playerName.split(' ').slice(1).join(' '), link) : oldHtml
       });
     }
     // console.log("Finished addPlayerLinks()!")
