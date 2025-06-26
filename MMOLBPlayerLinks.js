@@ -78,7 +78,7 @@
 
       // pitching/batting/on deck
       $("div.text-xs.font-semibold.uppercase.tracking-wide.opacity-70").next().html(function(index, oldHtml) {
-        return oldHtml !== playerName ? oldHtml.replace(playerName.slice(3), link) : oldHtml
+        return oldHtml !== link ? oldHtml.replace(playerName.slice(3), link) : oldHtml
       });
     }
     // console.log("Finished addPlayerLinks()!")
